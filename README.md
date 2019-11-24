@@ -3,8 +3,9 @@
 ### Contents
 1. [Overview](#overview)
 2. [Screens](#screens)
-2. [Routes Used](#routes)
-3. [Setup](#setup)
+3. [Routes Used](#routes)
+3. [Table Schema](#Schema)
+5. [Setup](#setup)
 
 
 ### Overview
@@ -15,7 +16,7 @@ There is a fixed table of Hosts/Employees and they are each mapped with a 3 lett
 * Everytime a visitor comes to the center, they enter their details along with the HostID and then,
     * Visitor recieves confirmation and address to the host's office
     * Host recieves information about the Visitor
-    
+    * Database is updated with information to reflect changes
 
 ### Screens
 #### Landing Page that a Guest sees when they walk in,
@@ -37,7 +38,13 @@ There is a fixed table of Hosts/Employees and they are each mapped with a 3 lett
 | /checkIn |(post) Creates a new Guest Visit Entry in MongoDB  |
 | /checkOut |(post) Deletes the  Guest Visit Entry in MongoDB  |
 
+#### Schema
 
+##### Host
+![Host Schema](https://raw.githubusercontent.com/akhileshPandey16/Innovacer_Entry_Mangement/master/images/host.png)
+
+##### Visitor
+![Visitor Schema](https://raw.githubusercontent.com/akhileshPandey16/Innovacer_Entry_Mangement/master/images/guest.png)
 
 #### Setup
 1. Download/Clone the Repository

@@ -1,5 +1,4 @@
 var mongoose = require("mongoose");
-
 var guestSchema = new mongoose.Schema({
     checkIn:Date,
     checkOut:Date,
@@ -10,6 +9,5 @@ var guestSchema = new mongoose.Schema({
     complete:Boolean,
     address:String
 });
-
 module.exports = mongoose.model("guest", guestSchema);
 // ==========================================================
