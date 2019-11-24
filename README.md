@@ -16,6 +16,5 @@
 
 | Route  | Description |
 | ------------- | ------------- |
-| / | (get)  Landing Page with options to check in and check out  |
-| checkIn/ |(post) Creates a new Guest Visit Entry in MongoDB  |
-| checkOut/ |(post) Deletes the  Guest Visit Entry in MongoDB  |
+| /checkIn |(post) Creates a new Guest Visit Entry in MongoDB  |
+| /checkOut |(post) Deletes the  Guest Visit Entry in MongoDB  |
