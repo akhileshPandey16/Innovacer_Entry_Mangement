@@ -16,13 +16,34 @@ mongoose.connect("mongodb://localhost/yelpcamp",{
 	 useMongoClient: true 
 });
 // ==========================================================
-app.get("/checkIn/new",function(req,res) {
+app.get("/checkIn/",function(req,res) {
 	res.render("checkIn");
 });
 // ==========================================================
 // ==========================================================
-app.get("/checkOut/new",function(req,res) {
+app.get("/checkOut/",function(req,res) {
 	res.render("checkOut");
+});
+// ==========================================================
+// ==========================================================
+app.post("/checkOut/",function(req,res) {
+	let nname = req.body.name,
+        naddress=req.body.address;
+        console.info(nname);
+        console.info(naddress);
+
+  var conditions = { name: nname }
+    , update = { address:naddress,complete:true}
+    , options = { multi: true };
+
+  guest.update(conditions, update, options, checkedOut);
+
+  function checkedOut(err, numAffected) {
+    res.redirect("/");
+  }
+
+
+
 });
 // ==========================================================
 app.get("/campgrounds/:id",function(req,res) {
@@ -42,7 +63,7 @@ app.post("/checkIn",function(req,res) {
 	var phone   =(req.body.guestPhone);
 	var email   =(req.body.guestEmail);
 	var desc	=(req.body.desc);
-	var newGuest ={checkIn:+ new Date(),name:name,phone:phone,email:email,desc:desc};
+	var newGuest ={checkIn:+ new Date(),name:name,phone:phone,email:email,desc:desc,complete:false};
 	guest.create(newGuest);
 	//Redirect to the CampGround!
 	res.redirect("/");

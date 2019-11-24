@@ -3,18 +3,21 @@
 <div class="container">
     <h1 style="text-align: center;">Guest Check-Out</h1>
     <div style="margin: 0 auto; width: 30%;">
-        <form action="/campgrounds" method="POST" style="margin: 30px 0;">
+        <form action="/checkOut" method="POST" style="margin: 30px 0;">
+            <!--<div class="form-group">-->
+                <!--<input class="form-control" type="text" name="camp" placeholder="Host ID (Ex. AAA )">-->
+                <!--<button class="btn btn-info" onclick="">Get Names</button>-->
+            <!--</div>-->
+            <!--<div class="form-group">-->
+                <!--<select name="" id="">-->
+                    <!--<option value="akhilesh">Select Name from list..</option>-->
+                <!--</select>-->
+            <!--</div>-->
             <div class="form-group">
-                <input class="form-control" type="text" name="camp" placeholder="Host ID (Ex. AAA )">
-                <button class="btn btn-info" onclick="">Get Names</button>
+                <input class="form-control" type="text" name="name" placeholder="Name">
             </div>
             <div class="form-group">
-                <select name="" id="">
-                    <option value="akhilesh">Select Name from list..</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <input class="form-control" type="text" name="image" placeholder="Address Visited">
+                <input class="form-control" type="text" name="address" placeholder="Address Visited">
             </div>
             <!--<div class="form-group">-->
                 <!--<label for="timeIn">Time Out: </label>-->
