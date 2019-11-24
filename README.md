@@ -5,8 +5,8 @@ Landing Page that a Guest sees when they walk in,
 
 New Guest Entry Page
 
-![Entry Screen](https://raw.githubusercontent.com/akhileshPandey16/Innovacer_Entry_Mangement/master/images/entry)
+![Entry Screen](https://raw.githubusercontent.com/akhileshPandey16/Innovacer_Entry_Mangement/master/images/entry.png)
 
 New Guest Exit Page
 
-![Exit Screen](https://raw.githubusercontent.com/akhileshPandey16/Innovacer_Entry_Mangement/master/images/exit)
+![Exit Screen](https://raw.githubusercontent.com/akhileshPandey16/Innovacer_Entry_Mangement/master/images/exit.png)
