@@ -1,0 +1,57 @@
+<%include partial/header.ejs%>
+
+
+<div class="container">
+	<div class="row">	
+
+		<div class="col-md-3">
+			<p class="lead">YelpCamp</p>
+			<div class="list-group">
+				<li class="list-group-item active"><a href="#">Location</a></li>
+				<li class="list-group-item"><a href="#">Facilites</a></li>
+				<li class="list-group-item"><a href="#">Transport</a></li>
+			</div>
+
+		</div>
+
+		<div class="col-md-8 img-thumbnail">
+		<p><img id="img-full" class="img-responsive" src="<%=campgrounds.image%>"></p>
+			<div class="caption-full">
+							<h5><a href="#"><%=campgrounds.name%></a></h5>
+			</div>
+
+			<p class="caption-full"><%=campgrounds.desc%></p>
+
+			<!-- ================== -->
+			         <div class="well">
+                <div class="text-right">
+                    <a class="btn btn-success" href="/campgrounds/<%= campground._id %>/comments/new">Add New Comment</a>
+                </div>
+                <hr>
+                <% campgrounds.comments.forEach(function(comment){ %>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <strong><%= comment.author %></strong>
+                            <span class="pull-right">10 days ago</span>
+                            <p>
+                                <%= comment.text %> 
+                            </p>
+                        </div>
+                    </div>
+                <% }) %>
+            </div>
+            <!-- ====================== -->
+		</div>
+</div>
+
+
+			<p>
+				<br>
+				<br>
+				<p>Comments:</p>
+				<%campgrounds.comment.forEach(function(com){%>
+				<p><%=com.text%></p>
+				<p><%=com.author%></p>
+				<%});%>
+			</p>
+<%include partial/footer.ejs%>

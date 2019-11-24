@@ -1,0 +1,32 @@
+img{
+	display:flex;
+	flex-wrap:wrap;
+	 max-width: 300px; 
+	padding-left: 30px;
+}
+select{
+	width: 100%;
+	padding: 10px;
+	height: 40px;
+}
+h4{
+	text-align: center;
+}
+.landing{
+	text-align: center;
+}
+.white{
+	color: white;
+}
+.img-thumbnail{
+	padding: 0;
+}
+.caption-full{
+	padding: 10px;
+}
+
+#img-full{
+	 max-width: 100%; 
+	width: 100%;
+	padding:  0;
+}
