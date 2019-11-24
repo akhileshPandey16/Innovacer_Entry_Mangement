@@ -31,14 +31,14 @@ There is a fixed table of Hosts/Employees and they are each mapped with a 3 lett
 ![Exit Screen](https://raw.githubusercontent.com/akhileshPandey16/Innovacer_Entry_Mangement/master/images/exit.png)
 
 
-#### Routes
+### Routes
 
 | Route  | Description |
 | ------------- | ------------- |
 | /checkIn |(post) Creates a new Guest Visit Entry in MongoDB  |
 | /checkOut |(post) Deletes the  Guest Visit Entry in MongoDB  |
 
-#### Schema
+### Schema
 
 ##### Host
 ![Host Schema](https://raw.githubusercontent.com/akhileshPandey16/Innovacer_Entry_Mangement/master/images/host.png)
@@ -46,7 +46,7 @@ There is a fixed table of Hosts/Employees and they are each mapped with a 3 lett
 ##### Visitor
 ![Visitor Schema](https://raw.githubusercontent.com/akhileshPandey16/Innovacer_Entry_Mangement/master/images/guest.png)
 
-#### Setup
+### Setup
 1. Download/Clone the Repository
 2. Navigate into the Repository folder on your disk using Terminal
 3. Make sure that you have the Node and MongoDB installed
