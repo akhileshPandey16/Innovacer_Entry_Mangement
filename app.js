@@ -1,13 +1,12 @@
 var express    = require("express"),
     app        = express(),
     bodyParser = require("body-parser"),
-    mongoose   = require("mongoose");
+    mongoose   = require("mongoose"),
     guest      = require("./models/guest"),
-    comments   = require("./models/comment"),
-
+    host      = require("./models/host"),
     seedDB	   = require("./seed");
 
-    // seedDB();
+    seedDB();
 
 app.use(bodyParser.urlencoded({extended:true}));
 app.set("view engine","ejs");
@@ -41,9 +40,6 @@ app.post("/checkOut/",function(req,res) {
   function checkedOut(err, numAffected) {
     res.redirect("/");
   }
-
-
-
 });
 // ==========================================================
 app.get("/campgrounds/:id",function(req,res) {
@@ -60,12 +56,19 @@ app.get("/campgrounds/:id",function(req,res) {
 
 app.post("/checkIn",function(req,res) {
 	var name    =(req.body.guestName);
+	var hostId    =(req.body.hostID);
 	var phone   =(req.body.guestPhone);
 	var email   =(req.body.guestEmail);
 	var desc	=(req.body.desc);
 	var newGuest ={checkIn:+ new Date(),name:name,phone:phone,email:email,desc:desc,complete:false};
+    host.find({"hostId":hostId},function (err,host) {
+      let data=host[0]._doc;
+      console.log(data.phone);
+      console.log(data.email);
+      console.log(data.name);
+    });
 	guest.create(newGuest);
-	//Redirect to the CampGround!
+
 	res.redirect("/");
 
 });
