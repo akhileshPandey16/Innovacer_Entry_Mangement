@@ -13,8 +13,8 @@ according to the [specs](https://summergeeks.in/static/assignments/summergeeks%2
 There is a fixed table of Hosts/Employees and they are each mapped with a 3 letter unique String denoting their HostId/EmployeeId.
 
 * Everytime a visitor comes to the center, they enter their details along with the HostID and then,
-        * Visitor recieves confirmation and address to the host's office
-        * Host recieves information about the Visitor
+    * Visitor recieves confirmation and address to the host's office
+    * Host recieves information about the Visitor
     
 
 ### Screens
