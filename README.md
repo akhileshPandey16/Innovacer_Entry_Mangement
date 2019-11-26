@@ -37,7 +37,7 @@ There is a fixed table of Hosts/Employees and they are each mapped with a 3 lett
 
 #### New Guest Exit Page
 
-![Exit Screen](https://raw.githubusercontent.com/akhileshPandey16/Innovacer_Entry_Mangement/master/images/checkOut copy.png)
+![Exit Screen](https://raw.githubusercontent.com/akhileshPandey16/Innovacer_Entry_Mangement/master/images/checkOutcopy.png)
 
 #### Check In Email Notification
 
