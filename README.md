@@ -2,10 +2,11 @@
 
 ### Contents
 1. [Overview](#overview)
-2. [Screens](#screens)
-3. [Routes Used](#routes)
-3. [Table Schema](#Schema)
-5. [Setup](#setup)
+2. [Setup](#setup)
+3. [Screens](#screens)
+4. [Routes Used](#routes)
+5. [Table Schema](#Schema)
+
 
 
 ### Overview
@@ -18,7 +19,19 @@ There is a fixed table of Hosts/Employees and they are each mapped with a 3 lett
     * Visitor recieves confirmation and address to the host's office
     * Host recieves information about the Visitor
     * Database is updated with information to reflect changes
-
+    
+    
+### Setup
+    ===
+    1. Download/Clone the Repository
+    2. Navigate into the Repository folder on your disk using Terminal
+    3. Make sure that you have the Node and MongoDB installed
+    4. Run the following commands,
+    `npm install`
+    `node app.js`
+    5. The App would now be Up and Running on localhost:3000
+    
+    
 ### Screens
 ===
 #### Landing Page that a Guest sees when they walk in,
@@ -58,20 +71,12 @@ There is a fixed table of Hosts/Employees and they are each mapped with a 3 lett
 
 ### Schema
 ===
-##### Host
+#### Host
 ![Host Schema](https://raw.githubusercontent.com/akhileshPandey16/Innovacer_Entry_Mangement/master/images/host.png)
 
-##### Visitor
+#### Visitor
 ![Visitor Schema](https://raw.githubusercontent.com/akhileshPandey16/Innovacer_Entry_Mangement/master/images/guest.png)
 
-### Setup
-===
-1. Download/Clone the Repository
-2. Navigate into the Repository folder on your disk using Terminal
-3. Make sure that you have the Node and MongoDB installed
-4. Run the following commands,
-    `npm install`
-    `node app.js`
-5. The App would now be Up and Running on localhost:3000
+
 
 
