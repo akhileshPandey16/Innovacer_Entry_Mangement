@@ -11,7 +11,7 @@
 
 ### Overview
 ---
-This app was developed as a part of SDE internship assignment at Innnovaccer,
+This app was developed as a part of SDE internship assignment at Innnovaccer, using NodeJS,MongoDB, ExpressJS, AWS SES for emails and AWS SNS for Mobile Messages,
 according to the [specs](https://summergeeks.in/static/assignments/summergeeks%202020%20-%20SDE%20Assignment.pdf), this assumes the following,
 There is a fixed table of Hosts/Employees and they are each mapped with a 3 letter unique String denoting their HostId/EmployeeId.
 
@@ -20,6 +20,7 @@ There is a fixed table of Hosts/Employees and they are each mapped with a 3 lett
     * Host recieves information about the Visitor
     * Database is updated with information to reflect changes
     
+
     
 ### Setup
 ---
