@@ -10,7 +10,7 @@
 
 
 ### Overview
-===
+---
 This app was developed as a part of SDE internship assignment at Innnovaccer,
 according to the [specs](https://summergeeks.in/static/assignments/summergeeks%202020%20-%20SDE%20Assignment.pdf), this assumes the following,
 There is a fixed table of Hosts/Employees and they are each mapped with a 3 letter unique String denoting their HostId/EmployeeId.
@@ -22,7 +22,7 @@ There is a fixed table of Hosts/Employees and they are each mapped with a 3 lett
     
     
 ### Setup
-    ===
+---
     1. Download/Clone the Repository
     2. Navigate into the Repository folder on your disk using Terminal
     3. Make sure that you have the Node and MongoDB installed
@@ -33,7 +33,7 @@ There is a fixed table of Hosts/Employees and they are each mapped with a 3 lett
     
     
 ### Screens
-===
+---
 #### Landing Page that a Guest sees when they walk in,
 ![Landing Screen](https://raw.githubusercontent.com/akhileshPandey16/Innovacer_Entry_Mangement/master/images/Welcome.png)
 
@@ -62,7 +62,7 @@ There is a fixed table of Hosts/Employees and they are each mapped with a 3 lett
 
 
 ### Routes
-===
+---
 
 | Route  | Description |
 | ------------- | ------------- |
