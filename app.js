@@ -1,11 +1,11 @@
 var express    = require("express"),
     app        = express(),
-    bodyParser = require("body-parser"),
     mongoose   = require("mongoose"),
     guest      = require("./models/guest"),
-    host      = require("./models/host"),
+    host       = require("./models/host"),
+    checkIn    = require("./Mailer/checkIn"),
+    checkOut   = require("./Mailer/checkOut"),
     seedDB	   = require("./seed");
-
     seedDB();
 
 app.use(bodyParser.urlencoded({extended:true}));
@@ -32,56 +32,43 @@ app.post("/checkOut/",function(req,res) {
         console.info(naddress);
 
   var conditions = { name: nname }
-    , update = { address:naddress,complete:true}
+    , update = { address:naddress,complete:true,checkOut:+ new Date()}
     , options = { multi: true };
 
   guest.update(conditions, update, options, checkedOut);
 
   function checkedOut(err, numAffected) {
+    guest.find({"name":nname},function (err,host) {
+      let data=host[0]._doc;
+      checkOut(data);
+    });
     res.redirect("/");
   }
 });
 // ==========================================================
-app.get("/campgrounds/:id",function(req,res) {
-		var id=req.params.id;
-		campground.findById(id,function(err,foundCamp) {
-			if (err) {
-				console.log("Error Found!")
-			}
-			else{
-		res.render("show",{campgrounds:foundCamp});}
-	});
-});
-// ==========================================================
-
+function sendToHost(guest){
+  console.log(guest);
+  console.info(guest.hostId);
+  host.find({"hostId":guest.hostId},function (err,host) {
+    let data=host[0]._doc;
+    checkIn(data,guest);
+  });
+}
 app.post("/checkIn",function(req,res) {
 	var name    =(req.body.guestName);
-	var hostId    =(req.body.hostID);
+	var hostId  =(req.body.hostID);
 	var phone   =(req.body.guestPhone);
 	var email   =(req.body.guestEmail);
 	var desc	=(req.body.desc);
-	var newGuest ={checkIn:+ new Date(),name:name,phone:phone,email:email,desc:desc,complete:false};
-    host.find({"hostId":hostId},function (err,host) {
-      let data=host[0]._doc;
-      console.log(data.phone);
-      console.log(data.email);
-      console.log(data.name);
-    });
+	var newGuest ={hostId:hostId,checkIn:+ new Date(),name:name,phone:phone,email:email,desc:desc,complete:false};
+
 	guest.create(newGuest);
+    sendToHost(newGuest);
 
 	res.redirect("/");
 
 });
-
-app.get("/time",function(req,res){
-  guest.findById("5ddaa66131da3425202c0f75",function (err,guest) {
-    let time = guest.checkIn;
-    console.log("Time"+time);
-    time=time.getDate();
-    res.send({"time":time});
-  });
-});
-
+// ==========================================================
 app.get("/*",function(req,res) {
 	res.render("index");
 });

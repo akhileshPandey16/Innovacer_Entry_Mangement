@@ -9,6 +9,7 @@
 
 
 ### Overview
+===
 This app was developed as a part of SDE internship assignment at Innnovaccer,
 according to the [specs](https://summergeeks.in/static/assignments/summergeeks%202020%20-%20SDE%20Assignment.pdf), this assumes the following,
 There is a fixed table of Hosts/Employees and they are each mapped with a 3 letter unique String denoting their HostId/EmployeeId.
@@ -19,19 +20,36 @@ There is a fixed table of Hosts/Employees and they are each mapped with a 3 lett
     * Database is updated with information to reflect changes
 
 ### Screens
+===
 #### Landing Page that a Guest sees when they walk in,
 ![Landing Screen](https://raw.githubusercontent.com/akhileshPandey16/Innovacer_Entry_Mangement/master/images/Welcome.png)
 
 #### New Guest Entry Page
 
-![Entry Screen](https://raw.githubusercontent.com/akhileshPandey16/Innovacer_Entry_Mangement/master/images/entry.png)
+![Entry Screen](https://raw.githubusercontent.com/akhileshPandey16/Innovacer_Entry_Mangement/master/images/checkIn.png)
+
+#### Check In Email Notification
+
+![CheckIn Email](https://raw.githubusercontent.com/akhileshPandey16/Innovacer_Entry_Mangement/master/images/em-checkIn.png)
+
+#### Check In Message Notification
+![CheckIn Message](https://raw.githubusercontent.com/akhileshPandey16/Innovacer_Entry_Mangement/master/images/ms-checkIn.jpeg)
 
 #### New Guest Exit Page
 
-![Exit Screen](https://raw.githubusercontent.com/akhileshPandey16/Innovacer_Entry_Mangement/master/images/exit.png)
+![Exit Screen](https://raw.githubusercontent.com/akhileshPandey16/Innovacer_Entry_Mangement/master/images/checkOut.png)
+
+#### Check In Email Notification
+
+![CheckIn Email](https://raw.githubusercontent.com/akhileshPandey16/Innovacer_Entry_Mangement/master/images/em-checkOut.png)
+
+#### Check In Message Notification
+![CheckIn Message](https://raw.githubusercontent.com/akhileshPandey16/Innovacer_Entry_Mangement/master/images/ms-checkOut.jpeg)
+
 
 
 ### Routes
+===
 
 | Route  | Description |
 | ------------- | ------------- |
@@ -39,7 +57,7 @@ There is a fixed table of Hosts/Employees and they are each mapped with a 3 lett
 | /checkOut |(post) Deletes the  Guest Visit Entry in MongoDB  |
 
 ### Schema
-
+===
 ##### Host
 ![Host Schema](https://raw.githubusercontent.com/akhileshPandey16/Innovacer_Entry_Mangement/master/images/host.png)
 
@@ -47,6 +65,7 @@ There is a fixed table of Hosts/Employees and they are each mapped with a 3 lett
 ![Visitor Schema](https://raw.githubusercontent.com/akhileshPandey16/Innovacer_Entry_Mangement/master/images/guest.png)
 
 ### Setup
+===
 1. Download/Clone the Repository
 2. Navigate into the Repository folder on your disk using Terminal
 3. Make sure that you have the Node and MongoDB installed
