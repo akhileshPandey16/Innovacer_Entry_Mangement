@@ -24,7 +24,7 @@ There is a fixed table of Hosts/Employees and they are each mapped with a 3 lett
     
 ### Setup
 ---
-Before proceeding please download and install ![NodeJS](https://nodejs.org/en/download/) and ![MongoDB](https://www.mongodb.com/download-center/community) because it is required.
+Before proceeding please download and install [NodeJS](https://nodejs.org/en/download/) and [MongoDB](https://www.mongodb.com/download-center/community) because it is required.
 
 
 
@@ -33,7 +33,9 @@ Before proceeding please download and install ![NodeJS](https://nodejs.org/en/do
 3. Make sure that you have the Node and MongoDB installed
 4. Run the following command to run the setup,
     `sh setup.sh`
-    #### Note: This app uses AWS credentials for sending Email and SMS notifications, please setup the config.json file in the repository with your credentials to avail the same, else sending notifications won't be possible.
+    
+    
+#### Note: This app uses AWS credentials for sending Email and SMS notifications, please setup the config.json file in the repository with your credentials to avail the same, else sending notifications won't be possible.
     
 Now everything required should be installed, go ahead and run the following command whenever you want to run the app,
 `node app.js`
