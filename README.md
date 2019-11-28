@@ -74,17 +74,17 @@ Now everything required should be installed, go ahead and run the following comm
 ### Routes
 ---
 
-| Route  | Description |
-| ------------- | ------------- |
-| /checkIn |(post) Creates a new Guest Visit Entry in MongoDB  |
-| /checkOut |(post) Deletes the  Guest Visit Entry in MongoDB  |
+| Route  | Description | Signature |
+| ------------- | ------------- | ------------- |
+| /checkIn |(post) Creates a new Guest Visit Entry in MongoDB | Body: { `hostID`, `guestName`, `guestPhone`, `guestEmail`, `desc`} |
+| /checkOut |(post) Deletes the  Guest Visit Entry in MongoDB  | Body: { `name`, `address`} |
 
 ### Schema
-===
-#### Host
+---
+#### Host Schema
 ![Host Schema](https://raw.githubusercontent.com/akhileshPandey16/Innovacer_Entry_Mangement/master/images/host.png)
 
-#### Visitor
+#### Visitor Schema
 ![Visitor Schema](https://raw.githubusercontent.com/akhileshPandey16/Innovacer_Entry_Mangement/master/images/guest.png)
 
 
