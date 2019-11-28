@@ -24,13 +24,20 @@ There is a fixed table of Hosts/Employees and they are each mapped with a 3 lett
     
 ### Setup
 ---
-    1. Download/Clone the Repository
-    2. Navigate into the Repository folder on your disk using Terminal
-    3. Make sure that you have the Node and MongoDB installed
-    4. Run the following commands,
-    `npm install`
-    `node app.js`
-    5. The App would now be Up and Running on localhost:3000
+Before proceeding please download and install ![NodeJS](https://nodejs.org/en/download/) and ![MongoDB](https://www.mongodb.com/download-center/community) because it is required.
+
+
+
+1. Download/Clone the Repository
+2. Navigate into the Repository folder on your disk using Terminal
+3. Make sure that you have the Node and MongoDB installed
+4. Run the following command to run the setup,
+    `sh setup.sh`
+    #### Note: This app uses AWS credentials for sending Email and SMS notifications, please setup the config.json file in the repository with your credentials to avail the same, else sending notifications won't be possible.
+    
+Now everything required should be installed, go ahead and run the following command whenever you want to run the app,
+`node app.js`
+##### The App would now be Up and Running on localhost:3000
     
     
 ### Screens

@@ -11,7 +11,7 @@ var express    = require("express"),
 app.use(bodyParser.urlencoded({extended:true}));
 app.set("view engine","ejs");
 app.use(express.static("public"));
-mongoose.connect("mongodb://localhost/yelpcamp",{
+mongoose.connect("mongodb://localhost/Innovaccer",{
 	 useMongoClient: true 
 });
 // ==========================================================
