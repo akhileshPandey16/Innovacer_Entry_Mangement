@@ -3,6 +3,7 @@ var express    = require("express"),
     mongoose   = require("mongoose"),
     guest      = require("./models/guest"),
     host       = require("./models/host"),
+    bodyParser = require("body-parser"),
     checkIn    = require("./Mailer/checkIn"),
     checkOut   = require("./Mailer/checkOut"),
     seedDB	   = require("./seed");
@@ -74,5 +75,5 @@ app.get("/*",function(req,res) {
 });
 // ==========================================================
 app.listen(4000,function() {
-	console.log("Serving YelpCamp on Port 4000");
+	console.log("Serving Entry Management App on Port 4000");
 });
